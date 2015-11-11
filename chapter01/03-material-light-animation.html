@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>WebGL Study</title>
     <link rel="stylesheet" href="/css/style.css">
+    
+    <script src="/lib/requestAnimtionFrame.js"></script>
     <script src="/lib/three.js"></script>
     <script src="/lib/stats.js"></script>
     <script src="/lib/dat.gui.js"></script>
@@ -115,7 +117,6 @@ document.addEventListener('DOMContentLoaded',function(){
     }
 
     var step = 0;
-    console.log(controls);
 
     function renderScene(){
         stats.update();
