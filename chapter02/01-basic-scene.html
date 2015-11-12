@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>WebGL Study</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+
     <script src="/lib/requestAnimtionFrame.js"></script>
     <script src="/lib/three.js"></script>
     <script src="/lib/stats.js"></script>
@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded',function(){
         stats = initStats();
 
         scene = new THREE.Scene();
-        scene.fog = new THREE.Fog(0xffffff,0.015,100);
+        // scene.fog = new THREE.Fog(0xffffff,0.015,100);
+        scene.fog = new THREE.FogExp2('#fff',0.015);
+
+        // 材质覆盖，所有的物体都会被设置的颜色所覆盖
+        scene.overrideMaterial = new THREE.MeshLambertMaterial({color:0xffffff});
         camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight,0.1,1000);
         renderer = new THREE.WebGLRenderer();
         renderer.setClearColor(new THREE.Color(0xEEEEEE,1.0));
