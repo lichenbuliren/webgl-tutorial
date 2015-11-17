@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded',function(){
         scene.fog = new THREE.FogExp2('#fff',0.015);
 
         // 材质覆盖，所有的物体都会被设置的颜色所覆盖
-        scene.overrideMaterial = new THREE.MeshLambertMaterial({color:0xffffff});
+        // scene.overrideMaterial = new THREE.MeshLambertMaterial({color:0xffffff});
         camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight,0.1,1000);
         renderer = new THREE.WebGLRenderer();
         renderer.setClearColor(new THREE.Color(0xEEEEEE,1.0));
